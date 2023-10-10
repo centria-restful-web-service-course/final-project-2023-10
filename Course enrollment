@@ -1,13 +1,14 @@
 
 problems: 
-1.put everyone in the system separately 
-2.authintication for students/teachers/staffs
-3.which courses should student take
-4.finding the courses and timings/details
-5.if accepted ,teacher an student should see something?
+1.As a student I should be able to register myself in the sytem 
+2.As a student I would should see the student version of the system only. Teacher should have the right to create /edit courses.
+3.As a student I want to see all the courses avilable to me.
+4.As a student i should be able to search for courses and veiw details.
+5.As a student, I should recieve the confirmation of enrollment.
+6. As a teacher I should be able to accept or reject an enrollment.
 
 
-course enrollment:
+course enrollment functionalities:
 1.Log in
 2.see the course list
 3.teacher can edit course list
