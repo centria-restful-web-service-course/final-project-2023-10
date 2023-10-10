@@ -1,0 +1,16 @@
+
+problems: 
+1.put everyone in the system separately 
+2.authintication for students/teachers/staffs
+3.which courses should student take
+4.finding the courses and timings/details
+5.if accepted ,teacher an student should see something?
+
+
+course enrollment:
+1.Log in
+2.see the course list
+3.teacher can edit course list
+4.student can enroll in multiple courses
+5.student can cancel enrollment
+6.teacher can accept or cancel enrollment
