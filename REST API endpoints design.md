@@ -11,7 +11,7 @@
     - Resource: Student
     - Data Model:
     {
-    "name": "Sumiya Chowdhury",
+    "name": "Sumiya Chowdhury",   
     "email": "sumiyaC@gmail.com",
     "password": "********"
     }
