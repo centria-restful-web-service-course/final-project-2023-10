@@ -1,0 +1,180 @@
+openapi: 3.0.3
+info:
+  title: User and Student Enrollment API
+  version: 1.0.0
+  description: API for managing user and student enrollment information
+  
+tags:
+  - name: Teachers
+    description: Endpoints related to teacher management
+  - name: Students
+    description: Endpoints related to student enrollment
+
+
+paths:
+  /users/students:
+    post:
+      summary: Create a new student
+      tags:
+        - Students
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StudentRequest'
+      responses:
+        '201':
+          description: Student created successfully
+          content:
+            application/json:
+              example:
+                message: Student created successfully
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              example:
+                message: Invalid input
+
+  /users/teachers:
+    post:
+      summary: Create a new teacher
+      tags:
+        - Teachers
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TeacherRequest'
+      responses:
+        '201':
+          description: Teacher created successfully
+          content:
+            application/json:
+              example:
+                message: Teacher created successfully
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              example:
+                message: Invalid input
+                
+
+  /enrollments:
+    post:
+      summary: Create a new enrollment
+      tags:
+        - Enrollment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EnrollmentRequest'
+      responses:
+        '201':
+          description: Enrollment created successfully
+          content:
+            application/json:
+              example:
+                message: Enrollment created successfully
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              example:
+                message: Invalid input
+
+  '/enrollments/{enrollment_id}':
+    put:
+      summary: Update an enrollment by Enrollment ID
+      tags:
+        - Enrollment
+      parameters:
+        - name: enrollment_id
+          in: path
+          required: true
+          description: ID of the enrollment to update
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EnrollmentUpdateRequest'
+      responses:
+        '200':
+          description: Enrollment updated successfully
+          content:
+            application/json:
+              example:
+                message: Enrollment updated successfully
+        '400':
+          description: Invalid input data
+          content:
+            application/json:
+              example:
+                message: Invalid input data
+        '404':
+          description: Enrollment not found
+          content:
+            application/json:
+              example:
+                message: Enrollment not found
+        '405':
+          description: Validation exception
+          content:
+            application/json:
+              example:
+                message: Validation exception
+
+
+components:
+  schemas:
+    StudentRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Sumiya Chowdhury"
+        email:
+          type: string
+          example: "sumiyaC@gmail.com"
+        password:
+          type: string
+          example: "********"
+
+    TeacherRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Jane Doe"
+        email:
+          type: string
+          example: "janedoe@example.com"
+        password:
+          type: string
+          example: "********"
+          
+          
+    EnrollmentRequest:
+      type: object
+      properties:
+        student_id:
+          type: string
+          example: "20238"
+        course_name:
+          type: string
+          example: "Mathematics 101"
+
+    EnrollmentUpdateRequest:
+      type: object
+      properties:
+        status:
+          type: string
+          example: "Accepted"
