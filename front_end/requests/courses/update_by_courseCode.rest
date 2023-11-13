@@ -1,0 +1,16 @@
+PUT http://localhost:5000/api/courses/IT00AC90-3006
+Content-Type: application/json
+
+{
+  "courseName": "Updated Rest API",
+  "teacherName": "Simo",
+  "timing": {
+    "startingDate": "2023-08-28",
+    "endingDate": "2023-12-28",
+    "duration": "3 months"
+  },
+  "courseCode": "IT00AC90-3006",
+  "courseObjectives": "Updated objectives",
+  "credits": 5,
+  "implementationMethod": "In-person"
+}

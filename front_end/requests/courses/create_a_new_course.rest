@@ -2,14 +2,14 @@ POST http://localhost:5000/api/courses
 Content-Type:application/json
 
 {
-  "courseName": "Rest API",
-  "teacherName": "Hekki",
+  "courseName": "for deleting",
+  "teacherName": "sumiya",
   "timing": {
     "startingDate": "2023-08-28",
     "endingDate": "2023-12-28",
     "duration": "3 months"
     },
-  "courseCode": "IT00AC90-3050",
+  "courseCode": "IT00AC90-1111",
   "courseObjectives": "Learn about Rest architecture",
   "credits": 5,
   "implementationMethod": "online"

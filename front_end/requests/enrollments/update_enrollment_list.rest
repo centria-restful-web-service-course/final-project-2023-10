@@ -1,0 +1,6 @@
+PUT http://localhost:5000/api/enrollments/123456
+Content-Type: application/json
+
+{
+  "status": "Accepted"
+}

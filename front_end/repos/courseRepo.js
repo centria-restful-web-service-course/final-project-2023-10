@@ -60,6 +60,54 @@ let courseRepo = {
                 });               
             }
         });
+    },
+
+    updateByCode: function(code, updatedCourse, resolve, reject) {
+        fs.readFile(FILE_NAME, function(err, data) {
+            if (err) {
+                reject(err);
+            } else {
+                let courses = JSON.parse(data);
+                let index = courses.findIndex(c => c.courseCode === code);
+    
+                if (index !== -1) {
+                    courses[index] = updatedCourse;
+                    fs.writeFile(FILE_NAME, JSON.stringify(courses), function (err) {
+                        if (err) {
+                            reject(err);
+                        } else {
+                            resolve(updatedCourse);
+                        }
+                    });
+                } else {
+                    reject({ message: "Course not found" });
+                }
+            }
+        });
+    },
+
+    deleteByCode: function(code, resolve, reject) {
+        fs.readFile(FILE_NAME, function(err, data) {
+            if (err) {
+                reject(err);
+            } else {
+                let courses = JSON.parse(data);
+                let filteredCourses = courses.filter(c => c.courseCode !== code);
+    
+                if (filteredCourses.length < courses.length) {
+                    fs.writeFile(FILE_NAME, JSON.stringify(filteredCourses), function (err) {
+                        if (err) {
+                            reject(err);
+                        } else {
+                            resolve({ message: 'Course deleted successfully' });
+                        }
+                    });
+                } else {
+                    reject({ message: "Course not found" });
+                }
+            }
+        });
     }
+
 }
 module.exports=courseRepo;
