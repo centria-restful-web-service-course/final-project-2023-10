@@ -13,7 +13,7 @@
     {  
     "name": "Sumiya Chowdhury",   
     "email": "sumiyaC@gmail.com",  
-    "password": "********"  
+    "password": "**********"  
     }
 
 - Create Teacher:
