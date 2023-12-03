@@ -1,2 +1,4 @@
 //front_end
 node_modules
+.env
+assets
