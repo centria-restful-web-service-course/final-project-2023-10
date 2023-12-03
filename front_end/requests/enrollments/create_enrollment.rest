@@ -1,0 +1,8 @@
+POST http://localhost:5000/api/enrollments
+Content-Type: application/json
+
+{
+  "enrollment_id": "3333",
+  "student_id": "0000",
+  "course_name": "Finnish 101"
+}

@@ -1,0 +1,16 @@
+POST http://localhost:5000/api/courses
+Content-Type:application/json
+
+{
+  "courseName": "testing2",
+  "teacherName": "sumiya",
+  "timing": {
+    "startingDate": "2023-08-28",
+    "endingDate": "2023-12-28",
+    "duration": "1 hour"
+    },
+  "courseCode": "IT00AC90-1110",
+  "courseObjectives": "Learn about Rest architecture",
+  "credits": 5,
+  "implementationMethod": "online"
+}

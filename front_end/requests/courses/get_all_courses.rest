@@ -1,0 +1,4 @@
+//GET http://localhost:5000/api/courses/IT00AC90-3006
+//GET http://localhost:5000/api/courses
+//GET http://localhost:5000/api/courses?name=Web development
+GET http://localhost:5000/api/courses?teacherName=Simo

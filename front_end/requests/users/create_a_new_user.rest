@@ -1,0 +1,8 @@
+POST http://localhost:5000/api/users?userType=Student
+Content-Type:application/json
+
+{
+    "name": "Farida Easmin",
+    "email": "fasmin@example.com",
+    "password": "********"
+  }
