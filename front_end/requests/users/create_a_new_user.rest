@@ -1,8 +1,8 @@
-POST http://localhost:5000/api/users?userType=student
+POST http://localhost:5000/api/users?userType=Student
 Content-Type:application/json
 
 {
-    "name": "Mina Keskitalo",
-    "email": "talo@example.com",
+    "name": "Farida Easmin",
+    "email": "fasmin@example.com",
     "password": "********"
   }
